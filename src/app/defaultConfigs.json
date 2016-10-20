@@ -1,0 +1,7 @@
+{
+  "theme": "light",
+  "api": {
+    "url": "/api/posts",
+    "params": {"cid": 11, "limit": 6, "order": "createdAt"}
+  }
+}
