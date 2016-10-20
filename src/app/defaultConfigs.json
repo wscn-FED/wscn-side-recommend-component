@@ -1,7 +1,7 @@
 {
   "theme": "light",
   "api": {
-    "url": "/api/posts",
+    "url": "http://api.wallstcn.com/v2/posts",
     "params": {"cid": 11, "limit": 6, "order": "createdAt"}
   }
 }

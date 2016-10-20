@@ -5,20 +5,21 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 /*to alleviate conflict with osx path*/
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 var paths = require('./paths');
+var svgoConfig = require('./svgo.config.json');
 
 var AUTOPREFIXER_BROWSERS = [
-  'Android 2.3',
-  'Android >= 4',
-  'Chrome >= 35',
-  'Firefox >= 31',
-  'Explorer >= 9',
-  'iOS >= 7',
-  'Opera >= 12',
-  'Safari >= 7.1'
+    'Android 2.3',
+    'Android >= 4',
+    'Chrome >= 35',
+    'Firefox >= 31',
+    'Explorer >= 9',
+    'iOS >= 7',
+    'Opera >= 12',
+    'Safari >= 7.1'
 ];
 
 module.exports = {
-    devtool: 'eval',
+    devtool: 'source-map',
     cache: true,
     entry: [
         require.resolve('webpack-dev-server/client') + '?/',
@@ -55,11 +56,15 @@ module.exports = {
     },
     module: {
         preLoaders: [
-            // {
-            //     test: /\.js$/,
-            //     loader: 'eslint',
-            //     include: paths.appSrc,
-            // }
+            {
+                test: /\.js$/,
+                loader: 'eslint',
+                include: paths.appSrc,
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svgo?' + JSON.stringify(svgoConfig)
+            }
         ],
         loaders: [
             {
@@ -68,7 +73,7 @@ module.exports = {
                 include: [paths.appSrc],
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 include: paths.appSrc,
                 loader: 'babel',
                 query: require('./babel.dev')
@@ -89,7 +94,12 @@ module.exports = {
                 loader: 'json'
             },
             {
-                test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)(\?.*)?$/,
+                test: /\.svg$/,
+                loader: 'svg-sprite',
+                include: /static\/icons/
+            },
+            {
+                test: /\.(jpg|png|gif|eot|ttf|woff|woff2)(\?.*)?$/,
                 include: [paths.appSrc, paths.appNodeModules],
                 loader: 'file',
                 query: {
