@@ -1,7 +1,24 @@
 {
-  "theme": "light",
-  "api": {
-    "url": "http://api.wallstcn.com/v2/posts",
-    "params": {"cid": 11, "limit": 6, "order": "createdAt"}
+  "development": {
+    "title": "推荐文章",
+    "api": {
+      "url": "/api/posts",
+      "params": {
+        "cid": 11,
+        "limit": 5,
+        "order": "createdAt"
+      }
+    }
+  },
+  "production": {
+    "title": "推荐文章",
+    "api": {
+      "url": "http://api.wallstreetcn.com/v2/posts",
+      "params": {
+        "cid": 11,
+        "limit": 5,
+        "order": "createdAt"
+      }
+    }
   }
 }

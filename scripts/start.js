@@ -109,6 +109,17 @@ function runDevServer(port) {
         quiet: true,
         watchOptions: {
             ignored: /node_modules/
+        },
+        proxy: {
+            '/api/**': {
+                target: 'http://api.wallstreetcn.com/v2',
+                // ignorePath: true,
+                pathRewrite: {
+                    '^/api': ''
+                },
+                changeOrigin: true,
+                logLevel: 'debug'
+            },
         }
     }).listen(port, (err, result) => {
         if (err) {

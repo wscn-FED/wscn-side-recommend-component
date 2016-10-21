@@ -1,7 +1,7 @@
 {
-  "name": "wscn-nav-bar-component",
-  "version": "0.0.1",
-  "description": "wscn-nav-bar-component",
+  "name": "wscn-side-recommend-component",
+  "version": "0.0.2",
+  "description": "wscn-side-recommend-component",
   "main": "dist/js/main.js",
   "scripts": {
     "test": "mocha config/testSetup.js \"src/**/*.spec.js\" --reporter progress",
@@ -10,7 +10,6 @@
     "build": " node ./scripts/build.js",
     "publish": "./node_modules/.bin/webpack --config config/webpack.config.publish.js",
     "dll-dev": "./node_modules/.bin/webpack --config config/webpack.dll.config.js --progress",
-    "dll": "NODE_ENV=production ./node_modules/.bin/webpack --config config/webpack.dll.config.js --progress",
     "build-dev": "npm run dll-dev && node ./scripts/start.js"
   },
   "keywords": [
@@ -18,13 +17,13 @@
     "components"
   ],
   "author": {
-    "name": "yuluyi",
-    "email": "yuluyi1991@gmail.com"
+    "name": "PanJiaChen",
+    "email": "466595307@qq.com"
   },
   "bugs": {
-    "url": "https://github.com/wscn-FED/wscn-nav-bar-component/issues"
+    "url": "https://github.com/wscn-FED/wscn-side-recommend-component/issues"
   },
-  "homepage": "https://github.com/wscn-FED/wscn-nav-bar-component",
+  "homepage": "https://github.com/wscn-FED/wscn-side-recommend-component",
   "license": "MIT",
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
@@ -63,7 +62,6 @@
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.22.0",
     "json-loader": "0.5.4",
-    "mobx-react-devtools": "^4.2.4",
     "mocha": "^3.0.2",
     "node-sass": "^3.8.0",
     "opn": "4.0.2",
