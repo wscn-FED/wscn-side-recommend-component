@@ -16,6 +16,7 @@ $nodeTitle: #414042;
       font-size: 14px;
       color: $fontColor;
       margin-left: 5px;
+      vertical-align: top;
     }
   }
   .wscnSideRecommend-list-item {
@@ -56,6 +57,9 @@ $nodeTitle: #414042;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        &:hover {
+          color: #1482F0;
+        }
       }
       .wscnSideRecommend-list-user-wrap {
         position: absolute;
@@ -84,6 +88,9 @@ $nodeTitle: #414042;
         .wscnSideRecommend-username {
           vertical-align: top;
           margin-left: 6px;
+          &:hover {
+            color: #1482F0;
+          }
         }
         .wscn-wscnSideRecommend-time {
           color: #999;

@@ -1,6 +1,6 @@
 {
   "name": "wscn-side-recommend-component",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "wscn-side-recommend-component",
   "main": "dist/js/main.js",
   "scripts": {
