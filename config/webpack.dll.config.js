@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var AssetsPlugin = require('assets-webpack-plugin');
 var paths = require('./paths');
 
-var deps = require('../package.json').dependencies;
+var deps = require('../package.json').peerDependencies;
 delete deps['wscn-react-vendor'];
 console.log(Object.keys(deps));
 

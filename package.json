@@ -82,7 +82,7 @@
     "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.16.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "axios": "^0.14.0",
     "classnames": "^2.2.5",
     "react": "^15.2.1",
