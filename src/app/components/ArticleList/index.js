@@ -67,7 +67,7 @@ class ArticleList extends React.PureComponent {
     return (
         <div className="wscnSideRecommend-container">
           <div className="wscnSideRecommend-title">
-            <Icon symbolId="wscnSideRecommend-logo"/>
+            <span className="wscnSideRecommend-logo-container"><Icon symbolId="wscnSideRecommend-logo"/></span>
             <span>{config.title}</span>
           </div>
           {(state.articles && state.articles.length > 0)

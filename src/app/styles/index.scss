@@ -1,5 +1,6 @@
 $fontColor: #333;
 $nodeTitle: #414042;
+$baseBlue: #1482F0;
 .wscnSideRecommend-container {
   border: 1px solid #E6E6E6;
   box-sizing: border-box;
@@ -8,10 +9,20 @@ $nodeTitle: #414042;
   .wscnSideRecommend-title {
     padding: 13px 16px;
     line-height: 20px;
-    svg {
+    .wscnSideRecommend-logo-container {
       height: 20px;
       width: 20px;
+      border-radius: 20px;
+      background: $baseBlue;
+      display: inline-block;
+      text-align: center;
+      svg {
+        height: 10px;
+        width: 10px;
+        vertical-align: 0px;
+      }
     }
+
     span {
       font-size: 14px;
       color: $fontColor;
