@@ -1,6 +1,6 @@
 {
   "name": "wscn-side-recommend-component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "wscn-side-recommend-component",
   "main": "dist/js/main.js",
   "scripts": {
@@ -87,7 +87,7 @@
     "classnames": "^2.2.5",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "wscn-react-vendor": "0.0.5"
+    "wscn-react-vendor": "^0.0.11"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
