@@ -7,7 +7,7 @@ $baseBlue: #1482F0;
   background: #fff;
   min-height: 611px;
   .wscnSideRecommend-title {
-    padding: 13px 16px;
+    padding: 13px 10px;
     line-height: 20px;
     .wscnSideRecommend-logo-container {
       height: 20px;
@@ -16,10 +16,12 @@ $baseBlue: #1482F0;
       background: $baseBlue;
       display: inline-block;
       text-align: center;
+      line-height: 20px;
+      margin-left: 0px;
       svg {
-        height: 10px;
-        width: 10px;
-        vertical-align: 0px;
+        height: 13px;
+        width: 13px;
+        vertical-align: middle;
       }
     }
 
@@ -99,6 +101,10 @@ $baseBlue: #1482F0;
         .wscnSideRecommend-username {
           vertical-align: top;
           margin-left: 6px;
+          max-width: 80px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
           &:hover {
             color: #1482F0;
           }
